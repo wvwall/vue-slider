@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css' integrity='sha512-q3eWabyZPc1XTCmF+8/LuE1ozpg5xxn7iO89yfSOd5/oKvyqLngoNGsx8jq92Y8eXJ/IRxQbEC+FGSYxtk2oiw==' crossorigin='anonymous'/>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <title>VueSlider</title>
+    <link rel="stylesheet" href="./assets/css/master.css">
+</head>
+<body>
+
+    <nav>
+        <div class="nav-logo">
+            <img src="./assets/img/logoinsta.png" alt="">
+        </div>
+    </nav>
+    
+    <div id="root">
+        <div class="slider">
+            <div class="container-slider">
+                <div class="prev controls" @click="prev">
+                    <i class="fas fa-chevron-left"></i>
+                </div>
+                <div class="imageSlider">
+                    <img :src="srcImage[i]" alt="">
+                </div>
+                <div class="description-container">
+                    <div class="user">
+                        <img src="./assets/img/userInsta.png" alt="">
+                        <span>wvwall</span>
+                    </div>
+                    <div class="comments">
+                        <span class="circle"></span><span>Utente:</span><span>{{comment}}</span>
+                    </div>
+                    <div class="interactions">
+                        <i class="far fa-comment"></i>
+                        <i class="far fa-heart"></i>
+                        <i class="far fa-share-square"></i>
+                        <i class="far fa-bookmark"></i>
+                        <span>Piace a 1234 utenti</span>
+                        <i class="far fa-smile"></i>
+                        <input v-model= "comment" placeholder="Aggiungi un commento...">
+                    </div>
+                    
+                </div>
+                <div class="next controls" @click="next">
+                    <i class="fas fa-chevron-right"></i>
+                </div>
+            </div>
+            <div class="dot-navigation">
+                <i v-for="dot in srcImage.length" class="fas fa-circle" :class="(dot -1 == i) ? 'active' : '' " @click="dotSelect(dot -1)" ></i>
+            </div>
+        </div>
+    </div>
+   
+
+
+
+
+    <script src='https://cdn.jsdelivr.net/npm/vue'></script>
+    <script src="./assets/js/main.js"></script>
+</body>
+</html>

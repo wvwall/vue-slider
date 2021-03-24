@@ -1,0 +1,121 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+.slider {
+    width: 100vw;
+    height: calc(100vh - 60px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.container-slider {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    
+}
+.container-slider img {
+    width: 400px;
+}
+.controls {
+    margin: 0 15px;
+    font-size: 40px;
+    color: rgba(0, 0, 0, 0.6)
+}
+i:hover {
+    cursor: pointer;
+    color: rgba(0, 0, 0, 0.9)
+}
+.dot-navigation {
+    margin-top: 30px;
+}
+.dot-navigation i {
+    margin: 0 10px;
+}
+.active {
+    color: #66ffa6
+}
+
+.nav-logo {
+    width: 100vw;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    box-shadow: rgba(0, 0, 0, 0.04) 0px 0px 4px 0px,
+    rgba(0, 0, 0, 0.08) 0px 8px 16px 0px;
+}
+.nav-logo img  {
+    margin-left: 200px;
+}
+
+.description-container {
+    width: 250px;
+    height: 400px;
+}
+.user {
+    width: 100%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid lightgray;
+}
+.user img {
+    width: 35px;
+    border: 100%;
+    margin-left: 20px;
+    margin-right: 10px;
+}
+.user span {
+    font-size: 15px;
+    font-weight: 500;
+}
+.comments {
+    width: 100%;
+    height: calc(100% - 160px);
+}
+.interactions {
+    width: 100%;
+    height: 100px;
+    border-top: 1px solid lightgray;
+}
+.interactions i {
+    font-size: 22px;
+    margin:15px 10px;
+    margin-bottom: 5px;
+    
+}
+.interactions .fa-bookmark {
+    margin-left: 30%;
+}
+.interactions span {
+    font-size: 14px;
+    font-weight: 600;
+    margin-left: 10px;
+    display: block;
+}
+.interactions input {
+   border: none;
+    height: 30px;
+}
+.comments {
+    display: flex;
+    align-items: center;
+}
+.comments span {
+    display: inline-block;
+    margin-top: 40px;
+    margin-left: 20px;
+    font-size: 15px;
+}
+.circle {
+    width: 35px;
+    height: 35px;
+    border-radius: 100%;
+    background-color:#66ffa6
+ 
+}
