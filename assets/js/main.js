@@ -8,6 +8,7 @@ var app = new Vue ({
           "./assets/img/img2.jpg",
           "./assets/img/img3.jpg"
       ],
+      play: " ",
       comment: ""  
     },
     methods: {
@@ -27,7 +28,14 @@ var app = new Vue ({
         },
         dotSelect: function(i){
             this.i=i;
+        },
+        autoslider: function () {
+          this.play =  setInterval(this.next, 2000);
+        },
+        stop: function () {
+            clearInterval(this.play);
         }
+        
     }
     
 });
