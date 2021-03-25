@@ -33,7 +33,7 @@
                         <span>wvwall</span>
                     </div>
                     <div class="comments">
-                        <span class="circle"></span><span>Utente:</span><span>{{comment}}</span>
+                        <span class="circle"></span><span>Utente :</span><span>{{comment}}</span>
                     </div>
                     <div class="interactions">
                         <i class="far fa-comment"></i>
@@ -51,7 +51,9 @@
                 </div>
             </div>
             <div class="dot-navigation">
+                <button @click="autoslider">AUTO-SLIDER</button>
                 <i v-for="dot in srcImage.length" class="fas fa-circle" :class="(dot -1 == i) ? 'active' : '' " @click="dotSelect(dot -1)" ></i>
+                <button @click="stop">STOP-SLIDER</button>
             </div>
         </div>
     </div>
