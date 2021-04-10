@@ -34,7 +34,7 @@ var app = new Vue ({
         },
         stop: function () {
             clearInterval(this.play);
-        }
+        },
         
     }
     

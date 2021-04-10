@@ -1,5 +1,5 @@
 vue-slider
-
+![Screenshot](VueSlider.png)
 Descrizione
 Rifare l'esercizio dello slider come fatto assieme in classe.
 Bonus
