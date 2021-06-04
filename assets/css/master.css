@@ -155,3 +155,27 @@ button {
     box-shadow: rgba(0, 0, 0, 0.04) 0px 0px 4px 0px,
     rgba(0, 0, 0, 0.08) 0px 8px 16px 0px;
 }
+
+
+@media all and (max-width:768px) {
+    .description-container {
+        display: none;
+    }
+}
+
+@media all and (max-width:500px) {
+    .next  {
+        position: relative;
+        right: 80px;
+        color: #fff;
+        opacity: 0.9;
+        font-size: 28px;
+    }
+    .prev {
+        position: relative;
+        left: 80px;
+        color: #fff;
+        opacity: 0.9;
+        font-size: 28px;
+    }
+}
