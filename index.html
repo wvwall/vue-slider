@@ -12,7 +12,7 @@
     />
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap"
       rel="stylesheet"
     />
     <title>VueSlider</title>
@@ -33,24 +33,44 @@
           </div>
           <div class="imageSlider">
             <img :src="srcImage[i]" alt="" />
+            <div class="comments mob" v-for="comment in comments">
+              <span class="circle"></span><span>Utente :</span>
+              <span>{{comment}}</span>
+            </div>
+            <div style="display: flex; justify-content: center" class="mob">
+              <input
+                v-model="comment"
+                @change="addComment"
+                placeholder="Aggiungi un commento..."
+              />
+            </div>
           </div>
           <div class="description-container">
             <div class="user">
               <img src="./assets/img/userInsta.png" alt="" />
               <span>wvwall</span>
             </div>
-            <div class="comments">
-              <span class="circle"></span><span>Utente :</span
-              ><span>{{comment}}</span>
+            <div class="container-comments">
+              <div class="comments" v-for="comment in comments">
+                <span class="circle"></span><span>Utente :</span>
+                <span>{{comment}}</span>
+              </div>
             </div>
+
             <div class="interactions">
               <i class="far fa-comment"></i>
               <i class="far fa-heart"></i>
               <i class="far fa-share-square"></i>
               <i class="far fa-bookmark"></i>
               <span>Piace a 1234 utenti</span>
-              <i class="far fa-smile"></i>
-              <input v-model="comment" placeholder="Aggiungi un commento..." />
+              <div>
+                <i class="far fa-smile"></i>
+                <input
+                  v-model="comment"
+                  @change="addComment"
+                  placeholder="Aggiungi un commento..."
+                />
+              </div>
             </div>
           </div>
           <div class="next controls" @click="next">
